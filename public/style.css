@@ -1,0 +1,19 @@
+:root{--lcd:#9bbc0f;--lcd2:#8bac0f;--ink:#0f380f}
+*{box-sizing:border-box}body{margin:0;font-family:'VT323',monospace;background:#1b1b1b;color:#eee;font-size:20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:#111;border-bottom:2px solid #333}
+h1{margin:0;font-size:32px;color:var(--lcd)}nav button,button{font-family:inherit;font-size:20px;background:#333;color:#eee;border:1px solid #555;padding:4px 12px;cursor:pointer;border-radius:4px}
+nav button.on{background:var(--lcd);color:var(--ink)}
+main{padding:20px;max-width:1000px;margin:auto}#pagerView{display:flex;gap:30px;flex-wrap:wrap}
+.pager{width:340px;background:linear-gradient(#2d2d2d,#151515);border-radius:30px 30px 18px 18px;padding:22px;box-shadow:0 10px 30px #000,inset 0 2px 3px #555}
+.brand{color:#888;font-size:14px;letter-spacing:2px;margin-bottom:8px}
+.lcd{background:var(--lcd);color:var(--ink);border:6px solid #0b0b0b;border-radius:6px;height:110px;padding:8px;box-shadow:inset 0 0 12px var(--lcd2);overflow:hidden}
+.status{display:flex;justify-content:space-between;font-size:18px}.scroll{white-space:nowrap;overflow:hidden;font-size:38px;margin-top:10px}
+.scroll span{display:inline-block;padding-left:100%;animation:marquee 8s linear infinite}@keyframes marquee{to{transform:translateX(-100%)}}
+.keys{display:flex;justify-content:space-around;margin-top:16px}.keys button{border-radius:50%;width:60px;height:44px;background:#444}.keys #read{border-radius:20px;width:90px}
+.vibrate{animation:buzz .08s linear 10}@keyframes buzz{0%{transform:translate(2px,0) rotate(1deg)}50%{transform:translate(-2px,0) rotate(-1deg)}}
+.panel{flex:1;min-width:300px}#pages{list-style:none;padding:0}#pages li{background:#262626;margin:6px 0;padding:8px;border-left:6px solid #666;border-radius:4px}
+#pages li.high{border-color:#e33}#pages li.normal{border-color:var(--lcd)}#pages li.digest{border-color:#58f}#pages small{color:#999;display:block}
+.call{background:#222;padding:20px;border-radius:12px;display:flex;flex-direction:column;gap:8px}
+.op{color:var(--lcd);font-size:24px}input,textarea{font-family:inherit;font-size:20px;background:#111;color:var(--lcd);border:1px solid #555;padding:6px}
+.big{font-size:26px;background:var(--lcd);color:var(--ink)}table{width:100%;border-collapse:collapse}td{border-bottom:1px solid #333;padding:3px 8px}
+footer{text-align:center;color:#777;padding:20px}

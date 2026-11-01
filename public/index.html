@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Pager Station · AI 寻呼台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><h1 data-i18n="title">📟 AI Pager Station</h1>
+<nav><button id="tabPager" class="on" data-i18n="tabPager">Pager</button><button id="tabCall" data-i18n="tabCall">Operator Call</button><button id="lang">中文</button></nav></header>
+<main>
+<section id="pagerView">
+  <div class="pager" id="device">
+    <div class="brand">MOTOROLA-ish · BP-1996</div>
+    <div class="lcd"><div class="status"><span id="clock">--:--</span><span id="count">0</span></div><div class="scroll"><span id="lcdText">READY</span></div></div>
+    <div class="keys"><button id="prev">◀</button><button id="read" data-i18n="read">READ</button><button id="next">▶</button></div>
+  </div>
+  <div class="panel">
+    <h2 data-i18n="inbox">Today's pages</h2>
+    <p class="quota"><span data-i18n="quota">Daily important-page quota</span>: <b id="quota">0/5</b></p>
+    <ul id="pages"></ul>
+    <button id="clear" data-i18n="clear">Clear all</button>
+  </div>
+</section>
+<section id="callView" hidden>
+  <div class="call">
+    <p class="op" data-i18n="greet">“Pager station, operator 027. Which number are you paging?”</p>
+    <label data-i18n="to">Pager number / name</label><input id="sender" placeholder="Boss / 老王">
+    <label data-i18n="msg">Your message (long text, chat dump or email)</label>
+    <textarea id="text" rows="8"></textarea>
+    <label><input type="checkbox" id="batch"> <span data-i18n="batch">Group chat dump (one message per line)</span></label>
+    <button id="send" class="big" data-i18n="send">Page it ☎</button>
+    <p id="opReply" class="op"></p>
+  </div>
+  <details><summary data-i18n="dict">Code dictionary 数字暗语</summary><table id="dict"></table></details>
+</section>
+</main>
+<footer>Kiroween 2026 · Resurrection · <span id="mode"></span></footer>
+<script type="module" src="/app.js"></script>
+</body></html>

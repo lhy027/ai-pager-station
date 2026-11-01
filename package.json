@@ -1,0 +1,14 @@
+{
+  "name": "ai-pager-station",
+  "version": "0.1.0",
+  "description": "AI Pager Station (AI 寻呼台) - the 1990s pager, resurrected with AI. Kiroween 2026.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test test/",
+    "build": "node scripts/build.js"
+  }
+}

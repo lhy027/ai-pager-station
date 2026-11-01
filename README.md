@@ -50,6 +50,8 @@ No dependencies to install (Node ≥ 18).
 
 ## Deploy (free)
 **Vercel:** import the repo; `vercel.json` builds static files to `dist/` and `api/page.js` becomes a serverless function. Add env vars in project settings (optional).
+**Netlify (recommended, no phone verification):** in Netlify choose *Add new site → Import an existing project → GitHub* and pick this repo. `netlify.toml` sets everything: build command `npm run build`, publish dir `dist`, functions dir `netlify/functions`, and redirects `/api/page` and `/api/health` to Netlify Functions. No env vars required (rule-based compression works offline); optionally add `AI_API_KEY` (and the other vars in `.env.example`) under Site settings → Environment variables.
+
 **Render / Railway / Fly:** run `npm start` as a Node web service.
 
 ## Screenshots

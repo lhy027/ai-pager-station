@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "name": "Check 20-char pager limit",
+  "description": "Ensure no code path can produce a page longer than 20 characters.",
+  "version": "1",
+  "when": { "type": "fileEdited", "patterns": ["src/**/*.js", "api/**/*.js"] },
+  "then": { "type": "askAgent", "prompt": "Check every code path that returns a `page` value (ruleCompress, parseAI, buildDigest, the API handler). Confirm each result goes through clip() so pagerLength(page) <= 20 code points, including emoji and CJK. Report or fix any violation." }
+}

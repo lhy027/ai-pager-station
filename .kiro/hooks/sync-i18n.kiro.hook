@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "name": "Sync i18n strings",
+  "description": "Keep EN and 中文 UI strings in sync.",
+  "version": "1",
+  "when": { "type": "fileEdited", "patterns": ["public/index.html", "public/app.js"] },
+  "then": { "type": "askAgent", "prompt": "Compare the `en` and `zh` objects in the I18N table in public/app.js and every data-i18n key in public/index.html. Add any missing keys to both languages with natural translations (keep the 90s pager-station tone)." }
+}

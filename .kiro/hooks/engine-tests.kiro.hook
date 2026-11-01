@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "name": "Update engine tests",
+  "description": "When the compression engine or code dictionary changes, update and run the unit tests.",
+  "version": "1",
+  "when": { "type": "fileEdited", "patterns": ["src/engine.js", "src/codes.js", "src/ai.js"] },
+  "then": { "type": "askAgent", "prompt": "The pager compression engine was edited. Review the change, add or update tests in test/engine.test.js covering any new behaviour, then run `npm test` and fix failures." }
+}

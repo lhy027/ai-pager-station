@@ -22,10 +22,10 @@ Dead tech: the pager + the human operator. Modern AI: an LLM operator that summa
 - Bilingual EN / 中文 toggle; pages persisted in localStorage
 
 ## How Kiro was used
-See [KIRO_USAGE.md](KIRO_USAGE.md). In short:
+See [KIRO_USAGE.md](KIRO_USAGE.md) (draft). The initial scaffold was generated with an AI assistant outside Kiro; the `.kiro` folder is the spec-driven plan that development will continue from in the Kiro IDE:
 - **Specs** (`.kiro/specs/`): EARS-style requirements, design and task lists for the compression engine and the retro UI.
 - **Steering** (`.kiro/steering/`): product, tech and structure rules (20-char invariant, zero deps, no-key fallback).
-- **Hooks** (`.kiro/hooks/`): auto-update tests on engine edits, enforce the 20-char limit, keep i18n strings in sync.
+- **Hooks** (`.kiro/hooks/`): configured to auto-update tests on engine edits, enforce the 20-char limit, keep i18n strings in sync.
 - **Vibe coding** for the visual pager design and copywriting.
 
 ## Run locally
